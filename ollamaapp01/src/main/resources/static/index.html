@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ollama Chatbot</title>
+</head>
+<body>
+	<h2>Ollama Chatbot (Spring Boot)</h2>
+
+	<input type="text" id="msg" placeholder="Type message here">
+	<button onclick="sendMsg()">Send</button>
+
+	<h3>Response:</h3>
+	<p id="response"></p>
+
+	<script>
+    function sendMsg() {
+        let message = document.getElementById("msg").value;
+
+        fetch("http://localhost:8080/api/v1/chat?message=" + message)
+            .then(res => res.text())
+            .then(data => document.getElementById("response").innerText = data);
+    }
+</script>
+
+</body>
+</html>
