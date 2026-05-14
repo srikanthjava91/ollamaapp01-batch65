@@ -16,17 +16,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-//@RequestMapping("api/v1/chat")
 public class OllamaChatController {
-
-//	@Autowired
-//	OllamaChatService ollamaChatService;
-//
-//	@GetMapping
-//	String chat(@RequestParam String message) {
-//		String response = ollamaChatService.chat(message);
-//		return response;
-//	}
 
 	@Autowired
 	private OllamaChatService chatService;
